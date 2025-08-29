@@ -4,6 +4,8 @@
  */
 package MainFrame;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Mauro
@@ -26,7 +28,6 @@ public class Ejercicio2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -50,12 +51,32 @@ public class Ejercicio2 extends javax.swing.JFrame {
         jLabel2.setText("Ingrese la Temperatura");
 
         BFahrenheit.setText("A Fahrenheit");
+        BFahrenheit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BFahrenheitActionPerformed(evt);
+            }
+        });
 
         BKelvin.setText("A Kelvin");
+        BKelvin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BKelvinActionPerformed(evt);
+            }
+        });
 
         BCelsius.setText("A Celsius");
+        BCelsius.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BCelsiusActionPerformed(evt);
+            }
+        });
 
         BRadianes.setText("A Radianes");
+        BRadianes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BRadianesActionPerformed(evt);
+            }
+        });
 
         IngresoTemperatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,8 +87,19 @@ public class Ejercicio2 extends javax.swing.JFrame {
         TextoTemperatura.setText("Temperatura");
 
         EligeTemperatura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Celsius", "Kelvin", "Radianes" }));
+        EligeTemperatura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EligeTemperaturaActionPerformed(evt);
+            }
+        });
 
+        BConvertir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Juan Cruz\\OneDrive\\Escritorio\\convertir (1).png")); // NOI18N
         BConvertir.setText("Convertir");
+        BConvertir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BConvertirActionPerformed(evt);
+            }
+        });
 
         TextoGrados.setText("Grados");
 
@@ -106,31 +138,30 @@ public class Ejercicio2 extends javax.swing.JFrame {
                                 .addComponent(TextoTemperatura)
                                 .addGap(18, 18, 18)
                                 .addComponent(EligeTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(IngresoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(30, 30, 30)
+                                .addGap(18, 18, 18)
                                 .addComponent(TextoGrados))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BConvertir, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(29, 29, 29))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(67, 67, 67)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(BKelvin)
-                                        .addComponent(BFahrenheit))
-                                    .addGap(36, 36, 36)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(BRadianes)
-                                        .addComponent(BCelsius)))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(104, 104, 104)
-                                    .addComponent(jLabel2)))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(104, 104, 104)
+                                .addComponent(jLabel2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(67, 67, 67)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BKelvin)
+                                    .addComponent(BFahrenheit))
+                                .addGap(36, 36, 36)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BRadianes)
+                                    .addComponent(BCelsius)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(12, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(BConvertir)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,7 +172,7 @@ public class Ejercicio2 extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(IngresoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IngresoTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TextoTemperatura)
                     .addComponent(EligeTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TextoGrados))
@@ -167,27 +198,27 @@ public class Ejercicio2 extends javax.swing.JFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(95, 95, 95)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(81, 81, 81)
+                .addGap(17, 17, 17)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -196,6 +227,86 @@ public class Ejercicio2 extends javax.swing.JFrame {
     private void IngresoTemperaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresoTemperaturaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_IngresoTemperaturaActionPerformed
+
+    private void BCelsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BCelsiusActionPerformed
+        if(BKelvin.isSelected() || BFahrenheit.isSelected() || BRadianes.isSelected()){
+            BKelvin.setSelected(false);
+            BFahrenheit.setSelected(false);
+            BRadianes.setSelected(false);
+        }
+    }//GEN-LAST:event_BCelsiusActionPerformed
+
+    private void BFahrenheitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BFahrenheitActionPerformed
+        if(BKelvin.isSelected() || BRadianes.isSelected() || BCelsius.isSelected()){
+            BKelvin.setSelected(false);
+            BRadianes.setSelected(false);
+            BCelsius.setSelected(false);
+        }
+    }//GEN-LAST:event_BFahrenheitActionPerformed
+
+    private void BKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BKelvinActionPerformed
+        if(BRadianes.isSelected() || BFahrenheit.isSelected() || BCelsius.isSelected()){
+            BRadianes.setSelected(false);
+            BFahrenheit.setSelected(false);
+            BCelsius.setSelected(false);
+        }
+    }//GEN-LAST:event_BKelvinActionPerformed
+
+    private void BRadianesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRadianesActionPerformed
+        if(BKelvin.isSelected() || BFahrenheit.isSelected() || BCelsius.isSelected()){
+            BKelvin.setSelected(false);
+            BFahrenheit.setSelected(false);
+            BCelsius.setSelected(false);
+        }
+    }//GEN-LAST:event_BRadianesActionPerformed
+
+    private void BConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BConvertirActionPerformed
+        Double tempCambiada = 0.0;
+        switch (EligeTemperatura.getSelectedIndex()) {
+            case 0:{
+                //Aca hago Fahrenheit a x
+                double fahrenheit = (Double.parseDouble(IngresoTemperatura.getText()));
+                if(BCelsius.isSelected()){
+                    tempCambiada = (fahrenheit-32) * 5/9;
+                    JOptionPane.showMessageDialog(this, "De Fahrenheit a Celsius es de\n" + String.format("%.2f", tempCambiada), "Convertido con exito", JOptionPane.INFORMATION_MESSAGE);
+                }else if(BKelvin.isSelected()){
+                    tempCambiada = (Double.parseDouble(IngresoTemperatura.getText()) - 32) * 5/9 + 273.15;
+                    JOptionPane.showMessageDialog(this, "De Fahrenheit a Kelvin es de\n" + String.format("%.2f", tempCambiada), "Convertido con exito", JOptionPane.INFORMATION_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(this, "La combinación no se puede hacer", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                break;
+            }case 1:{
+                if(BFahrenheit.isSelected()){
+                    tempCambiada = Double.parseDouble(IngresoTemperatura.getText()) * 9/5 + 32;
+                    JOptionPane.showMessageDialog(this, "De Celsius a Fahrenheit es de\n" + String.format("%.2f", tempCambiada), "Convertido con exito", JOptionPane.INFORMATION_MESSAGE);
+                }else if(BKelvin.isSelected()){
+                    tempCambiada = (Double.parseDouble(IngresoTemperatura.getText()) + 273.15);
+                    JOptionPane.showMessageDialog(this, "De Celsius a Kelvin es de\n" + String.format("%.2f", tempCambiada), "Convertido con exito", JOptionPane.INFORMATION_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(this, "La combinación no se puede hacer", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                break;
+            }case 2:{
+                if(BFahrenheit.isSelected()){
+                    tempCambiada = (Double.parseDouble(IngresoTemperatura.getText()) -273.15) * 9/5 + 32;
+                    JOptionPane.showMessageDialog(this, "De Kelvin a Fahrenheit es de\n" + String.format("%.2f", tempCambiada), "Convertido con exito", JOptionPane.INFORMATION_MESSAGE);
+                }else if(BCelsius.isSelected()){
+                    tempCambiada = (Double.parseDouble(IngresoTemperatura.getText()) - 273.15);
+                    JOptionPane.showMessageDialog(this, "De Kelvin a Celsius es de\n" + String.format("%.2f", tempCambiada), "Convertido con exito", JOptionPane.INFORMATION_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(this, "La combinación no se puede hacer", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                break;
+            }case 3:{
+                JOptionPane.showMessageDialog(this, "La combinación no se puede hacer", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_BConvertirActionPerformed
+
+    private void EligeTemperaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EligeTemperaturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EligeTemperaturaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,7 +353,6 @@ public class Ejercicio2 extends javax.swing.JFrame {
     private javax.swing.JTextField IngresoTemperatura;
     private javax.swing.JLabel TextoGrados;
     private javax.swing.JLabel TextoTemperatura;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
