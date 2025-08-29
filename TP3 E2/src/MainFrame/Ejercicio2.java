@@ -93,7 +93,7 @@ public class Ejercicio2 extends javax.swing.JFrame {
             }
         });
 
-        BConvertir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Juan Cruz\\OneDrive\\Escritorio\\convertir (1).png")); // NOI18N
+        BConvertir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-aprobar-y-actualizar-48.png"))); // NOI18N
         BConvertir.setText("Convertir");
         BConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
