@@ -32,3 +32,4 @@ Thumbs.db
 
 # Archivos de librerías externas (si las descargas manualmente)
 /lib/ # pero cuidado: si son dependencias necesarias, quizás sí deban versionarse
+/TP3 E2/build/
